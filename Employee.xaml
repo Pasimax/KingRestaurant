@@ -1,0 +1,58 @@
+﻿<Page x:Class="Final_Resturant.Employee"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Final_Resturant"
+      mc:Ignorable="d" 
+      d:DesignHeight="575" d:DesignWidth="810"
+      Title="Employee">
+
+    <Grid Background="#FFE5E5E5">
+        <Grid HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="1318" Background="#FFFFB10A">
+            <Label Content="Employee" Width="138" FontSize="18" FontWeight="Bold" Foreground="Black" Margin="358,3,822,0"/>
+        </Grid>
+        <Label Content="Employee ID" HorizontalAlignment="Left" Margin="28,76,0,0" VerticalAlignment="Top" Width="94" Height="24"/>
+        <TextBox x:Name="txt_eid" HorizontalAlignment="Left" Height="25" Margin="190,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" RenderTransformOrigin="0.422,-0.622" Background="White"/>
+        <Label Content="Employee Name." HorizontalAlignment="Left" Margin="28,120,0,0" VerticalAlignment="Top" Width="106" Height="24"/>
+        <TextBox x:Name="txt_address" HorizontalAlignment="Left" Height="47" Margin="190,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372" IsReadOnly="False" Background="White"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="28,163,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.601,-0.673" Height="25"/>
+        <Label Content="Contact No" HorizontalAlignment="Left" Margin="26,223,0,0" VerticalAlignment="Top" Width="108" Height="24" RenderTransformOrigin="0.093,-0.354"/>
+        <Label Content="Designation" HorizontalAlignment="Left" Margin="28,296,0,0" VerticalAlignment="Top" Width="108" Height="24" RenderTransformOrigin="1.028,0.458"/>
+        <Button x:Name="btn_update" Content="Update" HorizontalAlignment="Left" Margin="636,196,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.602,1.067" Height="40" Foreground="Black"  FontWeight="Bold" Background="#FFFFB10A" Click="btn_update_Click" />
+        <TextBox x:Name="txt_contact" HorizontalAlignment="Left" Height="26" Margin="190,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" IsReadOnly="False" Background="White"/>
+
+        <Button x:Name="btn_new" Content="New" HorizontalAlignment="Left" Margin="635,132,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.602,1.067" Height="40" Foreground="Black" FontWeight="Bold" Background="#FFFFB10A" Click="btn_new_Click" />
+        <TextBox x:Name="txt_ename" HorizontalAlignment="Left" Height="25" Margin="190,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" RenderTransformOrigin="0.422,-0.622" Background="White"/>
+        <Label Content="Gender" HorizontalAlignment="Left" Margin="28,266,0,0" VerticalAlignment="Top" Width="108" Height="24"/>
+        <Button x:Name="btn_delete" Content="Delete" HorizontalAlignment="Left" Margin="638,262,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.602,1.067" Height="40" Foreground="Black"  FontWeight="Bold" Background="#FFFFB10A" Click="btn_delete_Click" />
+
+
+        <ComboBox x:Name="cmb_desination" HorizontalAlignment="Left" Margin="195,294,0,0" VerticalAlignment="Top" Width="201" RenderTransformOrigin="0.298,-0.083" Height="26" MaxDropDownHeight="103" Background="White" >
+            <ComboBoxItem Content="Manager"  />
+            <ComboBoxItem Content="Admin"  />
+            <ComboBoxItem Content="Cashier"  />
+            <ComboBoxItem Content="Waiter" />
+        </ComboBox>
+        <RadioButton x:Name="gender"   Content="Male" HorizontalAlignment="Left" Margin="193,274,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.333,0.5" />
+        <RadioButton x:Name="gender1"   Content="Female" HorizontalAlignment="Left" Margin="310,274,0,0" VerticalAlignment="Top" />
+
+        <DataGrid x:Name="DataGridEmployee" Margin="13,371,94,27">
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FFFFB10A" />
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                    <Setter Property="BorderThickness" Value="0,0,1,2" />
+                    <Setter Property="BorderBrush" Value="Black" />
+                </Style>
+            </DataGrid.Resources>
+
+
+        </DataGrid>
+        <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Center" Margin="633,64,89,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.602,1.067" Height="40" Foreground="Black" FontWeight="Bold" Background="#FFFFB10A" Click="btn_search_Click" />
+        <TextBlock x:Name="error"  Foreground="Red"    HorizontalAlignment="Left" Margin="193,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="309"/>
+        <Label Content="E mail" HorizontalAlignment="Left" Margin="28,336,0,0" VerticalAlignment="Top" Width="108" Height="24" RenderTransformOrigin="1.028,0.458"/>
+        <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="26" Margin="193,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" IsReadOnly="False" Background="White"/>
+    </Grid>
+</Page>

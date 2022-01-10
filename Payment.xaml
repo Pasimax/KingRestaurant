@@ -1,0 +1,49 @@
+﻿<Page x:Class="Final_Resturant.Payment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Final_Resturant"
+      mc:Ignorable="d" 
+      d:DesignHeight="475" d:DesignWidth="810"
+      Title="Payment">
+
+    <Grid Background="#FFE5E5E5">
+        <Grid HorizontalAlignment="Center" Height="46" VerticalAlignment="Top" Width="1318" Background="#FFFFB10A" Margin="-2,0,1,0">
+            <Label Content="Payment" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Background="#00000000" Foreground="Black" FontWeight="Bold" Height="34"/>
+        </Grid>
+        <Label Content="Payment ID" HorizontalAlignment="Left" Margin="44,72,0,0" VerticalAlignment="Top" Height="36" Width="84"/>
+        <TextBox x:Name="txt_pid"    HorizontalAlignment="Left" Height="23" Margin="208,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <Button x:Name="btn_pnew"  Content="New"  Background="#FFFFB10A" HorizontalAlignment="Left" Margin="633,72,0,0" VerticalAlignment="Top" Width="81" Height="30" Click="btn_pnew_Click" >
+
+        </Button>
+        <DatePicker Name="txt_pdate"   HorizontalAlignment="Left" Margin="210,111,0,0" VerticalAlignment="Top" Height="23" Width="204"/>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="45,110,0,0" VerticalAlignment="Top" Height="36" Width="84" RenderTransformOrigin="0.351,0.193"/>
+        <Label Content="Payment Amount" HorizontalAlignment="Left" Margin="45,191,0,0" VerticalAlignment="Top" Width="107"/>
+        <TextBox x:Name="txt_pamount"    HorizontalAlignment="Left" Height="23" Margin="211,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <Button x:Name="btn_pupdate"   Background="#FFFFB10A"   Content="Update" HorizontalAlignment="Left" Margin="631,129,0,0" VerticalAlignment="Top" Width="83" Height="33" Click="btn_pupdate_Click" />
+        <Button x:Name="btn_pdelete"    Background="#FFFFB10A"   Content="Delete" HorizontalAlignment="Left" Margin="631,191,0,0" VerticalAlignment="Top" Width="85" Height="37" Click="btn_pdelete_Click" />
+        <DataGrid x:Name="pgrid"   HorizontalAlignment="Left" Height="182" Margin="52,259,0,0" VerticalAlignment="Top" Width="664">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}" >
+                    <Setter Property="Background" Value="#FFFFB10A" />
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                    <Setter Property="BorderThickness" Value="0,0,1,2" />
+                    <Setter Property="BorderBrush" Value="Black" />
+
+
+
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Payment Type" HorizontalAlignment="Left" Margin="45,147,0,0" VerticalAlignment="Top" Width="107"/>
+        <ComboBox Name="txt_ptype"   HorizontalAlignment="Left" Margin="209,151,0,0" VerticalAlignment="Top" Width="206" Height="23">
+            <ComboBoxItem Content="Cash"/>
+            <ComboBoxItem Content="Credit Card"/>
+        </ComboBox>
+        <Button x:Name="btn_psearch"     Background="#FFFFB10A"  Content="Search" HorizontalAlignment="Left" Margin="498,73,0,0" VerticalAlignment="Top" Width="79" Height="28" Click="btn_psearch_Click" />
+        <TextBlock x:Name="errotype" Foreground="Red"  HorizontalAlignment="Left" Margin="104,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="357"/>
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,31 @@
+﻿<Page x:Class="Final_Resturant.sms"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Final_Resturant"
+      mc:Ignorable="d" 
+      d:DesignHeight="475" d:DesignWidth="810"
+      Title="sms">
+
+    <Grid Background="#FFE5E5E5">
+        <Grid HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="1318" Background="#FFFFB10A" Margin="3,0,0,0">
+            <Label Content="Email" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Background="#00000000" Foreground="Black" FontWeight="Bold" Height="34"/>
+        </Grid>
+        <Label Content="Manager ID" HorizontalAlignment="Left" Margin="43,80,0,0" VerticalAlignment="Top" Height="35" Width="113" FontSize="14"/>
+        <Button Content="Send" Name="btn_send" Background="#FFFFB10A"   HorizontalAlignment="Left" Margin="662,393,0,0" VerticalAlignment="Top" Width="82" Height="42"  FontSize="14" Click="btn_send_Click"/>
+        <Label Content="Manager Name" HorizontalAlignment="Left" Margin="40,144,0,0" VerticalAlignment="Top" Height="33" Width="114" FontSize="14"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="38" Width="110" FontSize="14"/>
+        <Label Content="Message" HorizontalAlignment="Left" Margin="38,268,0,0" VerticalAlignment="Top" Height="36" Width="112" FontSize="14"/>
+        <TextBox x:Name="txt_mname"   HorizontalAlignment="Left" Height="23" Margin="183,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323"/>
+        <TextBox x:Name="txt_email"    HorizontalAlignment="Left" Height="22" Margin="183,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" RenderTransformOrigin="0.298,0.317"/>
+        <TextBox x:Name="txt_message"    HorizontalAlignment="Left" Height="112" Margin="183,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="335" />
+        <ComboBox  x:Name="cmd_mid"  HorizontalAlignment="Left" Margin="183,80,0,0" VerticalAlignment="Top" Width="207" Height="24" DropDownClosed="cmd_mid_DropDownClosed" />
+        <Label Content="Date" HorizontalAlignment="Left" Margin="536,80,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.612,0.164" Width="51"/>
+        <Label Content="Sales" HorizontalAlignment="Left" Margin="536,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.23,0.178"/>
+        <DatePicker Name="salesdate"    HorizontalAlignment="Left" Margin="662,82,0,0" VerticalAlignment="Top" SelectedDateChanged="salesdate_SelectedDateChanged"/>
+        <TextBox x:Name="sales"     HorizontalAlignment="Left" Height="23" Margin="662,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+
+    </Grid>
+</Page>

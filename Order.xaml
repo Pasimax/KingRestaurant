@@ -1,0 +1,56 @@
+﻿<Page x:Class="Final_Resturant.Order"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Final_Resturant"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="810"
+      Title="Order">
+
+    <Grid Background="#FFE5E5E5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="256*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="1318" Margin="-2,0,0,0" Background="#FFFFB10A" Grid.ColumnSpan="2">
+            <Label Content="Order" Width="138" FontSize="18" FontWeight="Bold" Foreground="Black" Margin="352,0,828,3"/>
+            <TextBlock x:Name="error"     HorizontalAlignment="Left" Margin="72,42,0,-22" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="338"/>
+        </Grid>
+
+        <Label Content="Order ID" HorizontalAlignment="Left" Margin="40,83,0,0" VerticalAlignment="Top" Width="90" Height="22"/>
+        <TextBox x:Name="txt_oid" HorizontalAlignment="Left" Height="23" Margin="172,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="29,77,0,0" VerticalAlignment="Top" Height="28" Width="75" Grid.Column="1"/>
+        <DataGrid x:Name="ogrid" HorizontalAlignment="Left" Height="130" Margin="190,231,0,0" VerticalAlignment="Top" Width="284" Grid.Column="1">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}" >
+                    <Setter Property="Background" Value="#FFFFB10A" />
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                    <Setter Property="BorderThickness" Value="0,0,1,2" />
+                    <Setter Property="BorderBrush" Value="Black" />
+
+
+
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Food name" HorizontalAlignment="Left" Margin="40,144,0,0" VerticalAlignment="Top" Width="90" Height="47"/>
+        <Label Content="Discount" HorizontalAlignment="Left" Margin="40,299,0,0" VerticalAlignment="Top" Width="90" Height="38"/>
+        <TextBox x:Name="txt_oquantity" HorizontalAlignment="Left" Height="23" Margin="172,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Button  x:Name="oadd"     Background="#FFFFB10A" Content="Add" HorizontalAlignment="Left" Margin="66,253,0,0" VerticalAlignment="Top" Width="74" Height="40"  Grid.Column="1" Click="oadd_Click"/>
+        <Button x:Name="ocheckout" Background="#FFFFB10A" Content="Go" HorizontalAlignment="Left" Margin="66,450,0,0" VerticalAlignment="Top" Width="74" Height="40"  Grid.Column="1" Click="ocheckout_Click"/>
+        <ComboBox Name="oname" HorizontalAlignment="Left" Margin="172,144,0,0" VerticalAlignment="Top" Width="120"   SelectionChanged="oname_SelectionChanged"  DropDownClosed="oname_DropDownClosed"    />
+        <TextBox x:Name="txt_fid" HorizontalAlignment="Left" Height="23" Margin="150,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Food ID" HorizontalAlignment="Left" Margin="29,136,0,0" VerticalAlignment="Top" Height="28" Width="76" Grid.Column="1"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="40,191,0,0" VerticalAlignment="Top" Width="90" Height="47"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="40,238,0,0" VerticalAlignment="Top" Width="90" Height="47"/>
+        <TextBox x:Name="txt_oprice" HorizontalAlignment="Left" Height="23" Margin="172,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txt_total" HorizontalAlignment="Left" Height="23" Margin="172,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Button x:Name="total" Background="#FFFFB10A"     Content="Sub Total" HorizontalAlignment="Left" Margin="40,368,0,0" VerticalAlignment="Top" Width="75" Click="total_Click" />
+        <DatePicker  Name="txt_odate"  HorizontalAlignment="Left" Margin="150,77,0,0" VerticalAlignment="Top" Height="29" Width="104" Grid.Column="1"/>
+        <TextBox x:Name="odiscount"  HorizontalAlignment="Left" Height="23" Margin="172,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Total" Background="#FFFFB10A" HorizontalAlignment="Left" Margin="195,404,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="Button_Click"/>
+        <TextBox x:Name="tot"    HorizontalAlignment="Left" Height="24" Margin="354,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  Grid.Column="1"/>
+
+    </Grid>
+</Page>
